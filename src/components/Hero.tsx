@@ -8,8 +8,8 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-foreground leading-tight mb-4">
               <span className="text-primary">Emily Crawley</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 max-w-lg">
-              Writer | English Teacher | Business Growth
+            <p className="text-xl text-muted-foreground mb-4 max-w-lg">
+              English Teacher | Business Growth
             </p>
             <p className="text-md text-muted-foreground max-w-lg">
               Helping professionals and beginners master English with personalized instruction. Teaching over 1,500 lessons a year through self-driven marketing and client development.

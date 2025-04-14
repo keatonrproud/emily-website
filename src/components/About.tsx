@@ -28,7 +28,7 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-16 bg-white">
+    <section id="about" className="pb-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="md:w-1/2 order-2 md:order-1">
@@ -36,7 +36,7 @@ const About = () => {
               <img
                 src="/images/emily-como.jpg"
                 alt="Emily Crawley in Como, Italy"
-                className="rounded-xl relative shadow-lg w-full h-[500px] object-cover object-center"
+                className="rounded-xl relative shadow-lg w-full h-[500px] object-cover object-right"
               />
             </div>
           </div>

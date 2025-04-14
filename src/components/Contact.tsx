@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import React, { useEffect } from "react";
 
 const ContactInfo = ({ icon, title, content, link }: { icon: React.ReactNode, title: string, content: string, link?: string }) => {
@@ -79,11 +79,6 @@ const Contact = () => {
                 icon={<Phone className="text-primary" size={20} />}
                 title="Phone"
                 content="+39-347-432-8015"
-              />
-              <ContactInfo 
-                icon={<MapPin className="text-primary" size={20} />}
-                title="Location"
-                content="Italy"
               />
             </div>
             
