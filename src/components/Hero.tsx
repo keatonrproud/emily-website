@@ -1,4 +1,3 @@
-
 const Hero = () => {
   return (
     <section className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-gray-50 to-white">

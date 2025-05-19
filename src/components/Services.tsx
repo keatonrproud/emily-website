@@ -49,8 +49,8 @@ const Skills = () => {
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 reveal delay-200">
             Teaching <span className="text-primary">Expertise</span>
           </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto reveal delay-300">
           <div className="h-1 w-20 bg-primary mx-auto mb-6 reveal delay-100"></div>
+          <p className="text-muted-foreground max-w-3xl mx-auto reveal delay-300">
             From zero clients to over 1,500 lessons annually, I've built a thriving English teaching business. <br></br>I deliver personalized instruction while handling all aspects of marketing and business growth.
           </p>
         </div>

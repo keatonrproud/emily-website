@@ -1,12 +1,11 @@
-
-import React, { useEffect } from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar";
+import ScrollToTop from "@/components/ScrollToTop";
 import Services from "@/components/Services";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
-import ScrollToTop from "@/components/ScrollToTop";
+import { useEffect } from "react";
 
 const Index = () => {
   useEffect(() => {

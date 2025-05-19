@@ -12,24 +12,10 @@ interface RecommendationProps {
 
 const recommendations: RecommendationProps[] = [
   {
-    quote: "Emily has been teaching my 11-year-old daughter for two years now, and the progress has been remarkable. She's patient, adapts her teaching style perfectly to children, and genuinely cares about her students' development. My daughter now speaks English with confidence.",
-    author: "Marco Bianchi",
-    role: "Parent",
-    company: "Milan, Italy",
-    rating: 5
-  },
-  {
-    quote: "As a lawyer who needs English daily, Emily's professional approach has been invaluable. She created a customized curriculum addressing my specific workplace needs. Her drive and commitment are evident in every lesson, and I've been her student for over three years.",
-    author: "Sofia Ricci",
-    role: "Corporate Lawyer",
-    company: "Rome, Italy",
-    rating: 5
-  },
-  {
-    quote: "Emily helped me go from basic English to presenting confidently at international conferences. As a university professor, I appreciate her academic background and business mindset. She commits fully to her students' goals, and her ability to build her teaching practice from scratch demonstrates her entrepreneurial spirit.",
-    author: "Luca Romano",
-    role: "University Professor",
-    company: "University of Bologna",
+    quote: "<strong>My daughter has been studying with Emily for a few years, and we couldn't be more happy</strong>. In fact, after class my daughter never wants her to leave and could continuing studying for hours.\n\nEmily is a fantastic teacher: patient, responsible and professional. She's always thinking of how to make the lessons more fun and appreciated by the children.\n<strong>I strongly suggest her as your English teacher!</strong>",
+    author: "Gloria",
+    role: "Mother of a student",
+    company: "",
     rating: 5
   }
 ];
@@ -91,19 +77,28 @@ const Recommendations = () => {
           </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="relative bg-blue-50 rounded-2xl p-8 md:p-12 shadow-md reveal delay-300">
-            <div className="flex justify-center mb-6">
+          <div className="relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 shadow-lg reveal delay-300 border border-blue-100">
+            <div className="absolute -top-5 left-1/2 transform -translate-x-1/2">
+              <div className="bg-primary text-white p-3 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-quote"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>
+              </div>
+            </div>
+            
+            <div className="flex justify-center mb-8 mt-4">
               {Array(recommendations[currentRecommendation].rating).fill(0).map((_, i) => (
-                <Star key={i} size={24} className="text-yellow-500 fill-yellow-500" />
+                <Star key={i} size={24} className="text-yellow-500 fill-yellow-500 drop-shadow-sm" />
               ))}
             </div>
-            <p className="text-lg md:text-xl font-medium text-center mb-8 italic text-foreground">
-              "{recommendations[currentRecommendation].quote}"
+            
+            <p className="text-lg md:text-xl font-normal text-center mb-8 text-gray-700 whitespace-pre-line leading-relaxed font-serif" dangerouslySetInnerHTML={{ __html: recommendations[currentRecommendation].quote }}>
             </p>
-            <div className="text-center">
-              <p className="font-bold text-foreground">{recommendations[currentRecommendation].author}</p>
+            
+            <div className="text-center mb-4">
+              <p className="font-bold text-foreground text-lg">{recommendations[currentRecommendation].author}</p>
               <p className="text-sm text-muted-foreground">
-                {recommendations[currentRecommendation].role} at {recommendations[currentRecommendation].company}
+                {recommendations[currentRecommendation].company 
+                  ? `${recommendations[currentRecommendation].role} at ${recommendations[currentRecommendation].company}`
+                  : recommendations[currentRecommendation].role}
               </p>
             </div>
             
@@ -111,7 +106,7 @@ const Recommendations = () => {
               <Button 
                 variant="outline" 
                 size="icon" 
-                className="rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
+                className="rounded-full bg-white hover:bg-primary hover:text-white transition-colors shadow-sm border-blue-100"
                 onClick={prevRecommendation}
               >
                 <ChevronLeft size={20} />
@@ -119,7 +114,7 @@ const Recommendations = () => {
               <Button 
                 variant="outline" 
                 size="icon" 
-                className="rounded-full bg-white hover:bg-primary hover:text-white transition-colors"
+                className="rounded-full bg-white hover:bg-primary hover:text-white transition-colors shadow-sm border-blue-100"
                 onClick={nextRecommendation}
               >
                 <ChevronRight size={20} />
@@ -127,7 +122,7 @@ const Recommendations = () => {
             </div>
           </div>
           
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-12">
             {recommendations.map((_, index) => (
               <button
                 key={index}

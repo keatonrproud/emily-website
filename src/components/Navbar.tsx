@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Mail, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 
@@ -42,17 +41,17 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
           <a href="#skills" className="text-foreground hover:text-primary transition-colors font-medium">Teaching</a>
-          <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium">Testimonials</a>
+          {/* <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium">Testimonials</a> */}
           <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
         </nav>
 
         <div className="hidden md:block">
-          <Button 
-            onClick={() => window.location.href = 'mailto:emilydellacrawley@gmail.com'}
-            className="bg-primary hover:bg-primary/90 text-white"
+          <a 
+            href="#contact"
+            className="inline-flex items-center justify-center bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2 text-sm font-medium transition-colors"
           >
             <Mail className="mr-2" size={18} /> Contact Me
-          </Button>
+          </a>
         </div>
 
         {/* Mobile menu button */}
@@ -71,17 +70,15 @@ const Navbar = () => {
           <nav className="flex flex-col px-4 py-4 space-y-4">
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#skills" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Teaching</a>
-            <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
+            {/* <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Testimonials</a> */}
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-            <Button 
-              onClick={() => {
-                window.location.href = 'mailto:emilydellacrawley@gmail.com';
-                setMobileMenuOpen(false);
-              }}
-              className="bg-primary hover:bg-primary/90 text-white w-full"
+            <a 
+              href="#contact"
+              className="inline-flex w-full items-center justify-center bg-primary hover:bg-primary/90 text-white rounded-md px-4 py-2 text-sm font-medium transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
             >
               <Mail className="mr-2" size={18} /> Contact Me
-            </Button>
+            </a>
           </nav>
         </div>
       )}

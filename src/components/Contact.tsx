@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Mail, Phone } from "lucide-react";
 import React, { useEffect } from "react";
@@ -80,15 +79,6 @@ const Contact = () => {
                 title="Phone"
                 content="+39-347-432-8015"
               />
-            </div>
-            
-            <div className="mt-8 reveal delay-300">
-              <Button 
-                onClick={() => window.location.href = 'mailto:emilydellacrawley@gmail.com'}
-                className="w-full bg-primary hover:bg-primary/90"
-              >
-                <Mail className="mr-2" size={18} /> Contact Me
-              </Button>
             </div>
           </div>
         </div>
