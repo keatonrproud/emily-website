@@ -67,14 +67,14 @@ const Recommendations = () => {
   }, []);
 
   return (
-    <section id="recommendations" className="pb-16 bg-white">
+    <section id="recommendations" className="pt-12 pb-16 bg-white relative scroll-mt-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-foreground mb-4 reveal delay-200">
             What <span className="text-primary">Students Say</span>
           </h3>
           <div className="h-1 w-20 bg-primary mx-auto mb-6 reveal delay-100"></div>
-          </div>
+        </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 md:p-12 shadow-lg reveal delay-300 border border-blue-100">
