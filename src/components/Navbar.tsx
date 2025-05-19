@@ -41,7 +41,7 @@ const Navbar = () => {
         <nav className="hidden md:flex space-x-8">
           <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium">About</a>
           <a href="#skills" className="text-foreground hover:text-primary transition-colors font-medium">Teaching</a>
-          {/* <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium">Testimonials</a> */}
+          <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium">Testimonials</a>
           <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium">Contact</a>
         </nav>
 
@@ -70,7 +70,7 @@ const Navbar = () => {
           <nav className="flex flex-col px-4 py-4 space-y-4">
             <a href="#about" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>About</a>
             <a href="#skills" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Teaching</a>
-            {/* <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Testimonials</a> */}
+            <a href="#recommendations" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Testimonials</a>
             <a href="#contact" className="text-foreground hover:text-primary transition-colors font-medium" onClick={() => setMobileMenuOpen(false)}>Contact</a>
             <a 
               href="#contact"
